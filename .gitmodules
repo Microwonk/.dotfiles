@@ -1,0 +1,6 @@
+[submodule ".config/DankMaterialShell/plugins/calculator"]
+	path = .config/DankMaterialShell/plugins/calculator
+	url = https://github.com/rochacbruno/DankCalculator
+[submodule ".config/DankMaterialShell/plugins/emojiLauncher"]
+	path = .config/DankMaterialShell/plugins/emojiLauncher
+	url = https://github.com/devnullvoid/dms-emoji-launcher
