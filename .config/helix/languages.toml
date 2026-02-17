@@ -13,6 +13,7 @@ roots = [
 '[' = ']'
 '"' = '"'
 '`' = '`'
+'|' = '|'
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"

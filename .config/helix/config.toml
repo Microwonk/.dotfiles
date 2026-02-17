@@ -1,35 +1,75 @@
-theme = "onedark"
+theme = "mw"
 
 [editor]
 line-number = "relative"
-mouse = false
-auto-completion=true
-auto-save=true
-auto-format=true
-text-width=80
-gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+mouse = true
+auto-completion = true
+auto-save = true
+auto-format = true
+text-width = 80
 soft-wrap.enable = true
-soft-wrap.max-indent-retain=80
-end-of-line-diagnostics="info"
+soft-wrap.max-indent-retain = 80
+end-of-line-diagnostics = "info"
+shell = ["zsh", "-c"]
+gutters = [
+  "diagnostics",
+  "spacer",
+  "line-numbers",
+  "spacer",
+  "diff",
+]
+bufferline = "multiple"
+color-modes = true
+popup-border = "all"
+
+[editor.inline-diagnostics]
+cursor-line = "info"
+other-lines = "warning"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
 
 [editor.file-picker]
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "file-modification-indicator", "read-only-indicator"]
+left = [
+  "mode",
+  "spinner",
+  "file-modification-indicator",
+  "read-only-indicator"
+]
 center = ["file-name"]
-right = ["diagnostics", "register", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [
+  "diagnostics",
+  "register",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
 separator = "│"
-mode.normal = "LOCKED"
+mode.normal = "NORMAL"
 mode.insert = "INSERT"
-mode.select = "VISUAL SEL"
+mode.select = "SELECT"
 
 [editor.lsp]
-enable=true
-auto-signature-help=true
+enable = true
+auto-signature-help = true
+display-signature-help-docs = true
 display-messages = true
 
 [editor.indent-guides]
 render = true
 character = "┊"
 skip-levels = 1
+
+[editor.search]
+smart-case = true
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
+B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
