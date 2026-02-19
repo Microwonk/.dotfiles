@@ -3,8 +3,10 @@ bar {
     swaybar_command waybar
 }
 exec_always dunst
-
-default_border none
+focus_follows_mouse yes
+focus_on_window_activation smart
+focus_wrapping no
+default_border pixel 2
 
 ### Variables
 set $mod Mod4
