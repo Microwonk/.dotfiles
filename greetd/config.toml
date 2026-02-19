@@ -1,0 +1,6 @@
+[terminal]
+vt = 1
+
+[default_session]
+user = "greeter"
+command = "sh -c \"tuigreet -c sway -r -g \\\"$(curl -s https://uselessfacts.jsph.pl/api/v2/facts/random | jq -r '.text' || echo 'No useless fact for today')\\\"\""
