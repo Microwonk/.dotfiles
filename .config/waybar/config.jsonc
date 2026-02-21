@@ -74,7 +74,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "kitty -e nmtui"
+    "on-click": "kitty -e impala"
   },
   "bluetooth": {
     "format": "",
@@ -82,7 +82,7 @@
     "format-off": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "kitty -e bluetuith"
+    "on-click": "kitty -e bluetui"
   },
   "custom/weather": {
     "format": "Vienna {}",
@@ -93,7 +93,8 @@
   },
   "pulseaudio": {
     "format": "  {volume}%",
-    "format-muted": "󰝟 Muted"
+    "format-muted": "󰝟 Muted",
+    "on-click": "kitty -e wiremix -v output"
   },
   "battery": {
     "format": "{capacity}% {icon}",

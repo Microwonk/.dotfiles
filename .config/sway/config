@@ -21,6 +21,11 @@ set $term kitty
 set $menu fuzzel
 set $browser zen-browser
 
+# TUIs
+set $bluetooth bluetui
+set $wifi impala
+set $audio wiremix -v output
+
 ### Output configuration
 output * background ~/.config/wallpapers/1.jpg fill
 output DP-2 resolution 1920x1080@165Hz position 1920,0
@@ -30,17 +35,23 @@ input * {
   xkb_options "caps:super,shift:both_capslock,grp:win_space_toggle"
 }
 
+input "type:touchpad" {
+    tap enabled
+    natural_scroll enabled
+}
+
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+
 ### Key bindings
 bindsym $mod+t exec $term
 bindsym $mod+Shift+b exec $browser
 bindsym $mod+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+Alt+l exec swaylock -i "~/.config/wallpapers/1.jpg"
-# Drag floating windows by holding down $mod and left mouse button.
-# Resize them with right mouse button + $mod.
-# Despite the name, also works for non-floating windows.
-# Change normal to inverse to use left mouse button for resizing and right
-# mouse button for dragging.
+bindsym $mod+Alt+b exec $term -e $bluetooth
+bindsym $mod+Alt+w exec $term -e $wifi
+bindsym $mod+Alt+a exec $term -e $audio
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
