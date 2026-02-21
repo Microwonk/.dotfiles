@@ -57,8 +57,14 @@ tooltip {
 }
 
 #workspaces button.focused {
+  padding: 0px 12px;
   background: #2f5d50;
   color: #ffffff;
+}
+
+#taskbar button {
+  margin: 2px 2px;
+  padding: 4px;
 }
 
 #clock,
@@ -83,6 +89,7 @@ tooltip {
 }
 
 #mpris {
+  margin: 0px 15px;
   color: #ffffff;
   animation: repeat;
   animation-name: blink;
