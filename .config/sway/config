@@ -1,7 +1,4 @@
-
-bar {
-    swaybar_command waybar
-}
+exec ~/.config/waybar/launch.sh
 exec_always dunst
 focus_follows_mouse yes
 focus_on_window_activation smart
