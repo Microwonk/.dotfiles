@@ -153,7 +153,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-set $exit "exit: [s]leep, [p]oweroff, [r]eboot, [l]ogout"
+set $exit "exit[(s)uspend|(p)oweroff|(r)eboot|(l)ogout]"
 mode $exit {
     bindsym {
         s exec systemctl suspend, mode "default"
