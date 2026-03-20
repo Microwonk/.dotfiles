@@ -26,10 +26,67 @@ inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
 check.command = "clippy"
+checkOnSave = true
+cargo.allFeatures = true
+
+[language.debugger]
+command = "codelldb"
+name = "codelldb"
+port-arg = "--port {}"
+transport = "tcp"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html", "tailwindcss"]
-file-types = ["html", "hbs"]
+scope = "source.hbs"
+language-servers = ["vscode-html-language-server"]
+file-types = ["hbs", "html"]
+# works better than other parsers for handlebars templates
+formatter = { command = 'prettier', args = ["--parser", "angular"] }
 auto-format = true
-indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "c"
+auto-format = true
+
+[language.debugger]
+command = "codelldb"
+name = "codelldb"
+port-arg = "--port {}"
+transport = "tcp"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
+
+[[langage]]
+name = "javascript"
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+auto-format = true
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'|' = '|'
