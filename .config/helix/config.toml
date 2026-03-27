@@ -72,4 +72,11 @@ smart-case = true
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
-B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
+# B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
+
+[keys.normal.space.C]
+p = ":pipe ccase --to pascal"
+c = ":pipe ccase --to camel"
+k = ":pipe ccase --to kebab"
+s = ":pipe ccase --to snake"
+S = ":pipe ccase --to constant"
