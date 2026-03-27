@@ -50,7 +50,7 @@ runInTerminal = true
 [[language]]
 name = "html"
 scope = "source.hbs"
-language-servers = ["vscode-html-language-server"]
+language-servers = [{ name = "superhtml", except-features = ["format"] }, "vscode-html-language-server"]
 file-types = ["hbs", "html"]
 # works better than other parsers for handlebars templates
 formatter = { command = 'prettier', args = ["--parser", "angular"] }
