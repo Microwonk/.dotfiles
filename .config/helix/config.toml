@@ -10,6 +10,11 @@ text-width = 80
 soft-wrap.enable = true
 soft-wrap.max-indent-retain = 80
 end-of-line-diagnostics = "info"
+scroll-lines = 2
+continue-comments = false
+completion-replace = true
+trim-final-newlines = true
+trim-trailing-whitespace = true
 shell = ["zsh", "-c"]
 gutters = [
   "diagnostics",
@@ -20,7 +25,7 @@ gutters = [
 ]
 bufferline = "multiple"
 color-modes = true
-popup-border = "all"
+# popup-border = "all"
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
@@ -61,6 +66,7 @@ enable = true
 # auto-signature-help = true
 display-signature-help-docs = true
 display-messages = true
+goto-reference-include-declaration = false
 
 [editor.indent-guides]
 render = true
@@ -70,9 +76,12 @@ skip-levels = 1
 [editor.search]
 smart-case = true
 
+[keys.normal]
+C-v = ":toggle cursorcolumn"
+
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
-# B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
+B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
 
 [keys.normal.space.C]
 p = ":pipe ccase --to pascal"
