@@ -9,7 +9,8 @@
     "sway/mode",
     "sway/scratchpad",
     "wlr/taskbar",
-    "mpris"
+    "mpris",
+    "custom/cat"
   ],
   "modules-center": [
     "sway/window"
@@ -18,7 +19,6 @@
     "sway/language",
     "custom/weather",
     "network",
-    "bluetooth",
     "pulseaudio",
     "battery",
     "tray",
@@ -58,34 +58,22 @@
     }
   },
   "network": {
-    "format-icons": [
-      "󰤯",
-      "󰤟",
-      "󰤢",
-      "󰤥",
-      "󰤨"
-    ],
-    "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
-    "format-disconnected": "󰖪",
+    "format": "leaked IP: {ipaddr}",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "nospacing": 1,
+    "nospacing": 0,
     "on-click": "kitty -e impala"
   },
-  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-off": "󰂲",
-    "format-connected": "",
-    "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "kitty -e bluetui"
+  "custom/cat": {
+    "exec": "~/.dotfiles/.config/waybar/cats.sh",
+    "interval": 5,
+    "tooltip": false,
+    "format": "{}"
   },
   "custom/weather": {
-    "format": "Vienna {}",
+    "format": "{}",
     "tooltip": true,
     "interval": 1800,
     "exec": "wttrbar --location Vienna -l de --custom-indicator '{ICON} {temp_C}° ({FeelsLikeC}°)'",
@@ -139,11 +127,10 @@
   "mpris": {
     "format": "{player_icon} {dynamic}",
     "format-paused": "<span>{status_icon} {dynamic}</span>",
-    "max-length": 20,
+    "max-length": 30,
     "interval": 1,
     "player-icons": {
-      "default": "⏸",
-      "mpv": "🎵"
+      "default": "🎵"
     },
     "status-icons": {
       "paused": "▶"
