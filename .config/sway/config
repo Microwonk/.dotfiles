@@ -5,6 +5,7 @@ focus_follows_mouse yes
 focus_on_window_activation smart
 focus_wrapping no
 default_border pixel 2
+gaps inner 2
 
 ### Variables
 set $mod Mod4
@@ -25,7 +26,7 @@ set $wifi impala
 set $audio wiremix -v output
 
 ### Output configuration
-output * background ~/.config/wallpapers/1.jpg fill
+output * background ~/.config/wallpapers/space.jpg fill
 
 input * {
   xkb_layout "us,de"
@@ -162,7 +163,7 @@ mode $exit {
         p exec systemctl poweroff
         r exec systemctl reboot
         l exec swaymsg exit
-    
+
         Return mode "default"
         Escape mode "default"
         $mod+x mode "default"

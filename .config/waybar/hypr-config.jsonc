@@ -43,8 +43,9 @@
     "tooltip": false
   },
   "clock": {
-    "format": "  {:%H:%M  %d %b}",
+    "format": "  {:%H:%M:%S  %d %b}",
     "tooltip-format": "<span>{calendar}</span>",
+    "interval": 1,
     "calendar": {
       "mode": "month",
       "weeks-pos": "right",

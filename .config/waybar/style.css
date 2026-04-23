@@ -35,14 +35,14 @@ window#waybar.empty #window {
   padding: 0px 2px;
   margin: 0 3px 0 0;
   border-radius: 4px;
-  background-color: #3c3836;
+  background: rgba(30, 30, 30, 0.8);
   box-shadow: 0 1px 2px rgba(10, 10, 10, 0.8);
   color: #ebdbb2;
 }
 
 #workspaces button.active {
   padding: 0px 12px;
-  background: #2f5d50;
+  background: rgba(70, 30, 30, 0.8);
   color: #ffffff;
 }
 
@@ -53,7 +53,7 @@ window#waybar.empty #window {
 
 #workspaces button.focused {
   padding: 0px 12px;
-  background: #2f5d50;
+  background: rgba(70, 30, 30, 0.8);
   color: #ffffff;
 }
 
@@ -71,7 +71,7 @@ window#waybar.empty #window {
 #battery,
 #tray,
 #custom-power {
-  background: rgba(22, 53, 35, 0.8);
+  background: rgba(30, 30, 30, 0.8);
   margin: 4px 6px;
   padding: 0 12px;
   border-radius: 4px;
@@ -81,8 +81,6 @@ window#waybar.empty #window {
 #custom-cat {
   margin: 4px 6px;
   padding: 0 12px;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.8);
 }
 
 #custom-power {
@@ -103,7 +101,7 @@ window#waybar.empty #window {
 
 tooltip {
   padding: 8px;
-  background-color: rgba(47, 93, 80, 0.7);
+  background-color: rgba(10, 10, 10, 0.7);
   border-radius: 8px;
   font-size: 12px;
 }
