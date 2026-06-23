@@ -47,7 +47,8 @@ bindsym $mod+b exec $browser
 bindsym $mod+q kill
 bindsym $mod+d exec $menu
 bindsym $mod+v exec ~/.config/fuzzel/cliphist-fuzzel-img
-bindsym $mod+Alt+l exec swaylock -i "~/.config/wallpapers/1.jpg"
+bindsym $mod+z exec ~/.config/fuzzel/zellij-select
+bindsym $mod+Alt+l exec swaylock -i "~/.config/wallpapers/space.jpg"
 bindsym $mod+Alt+b exec $term -e $bluetooth
 bindsym $mod+Alt+w exec $term -e $wifi
 bindsym $mod+Alt+a exec $term -e $audio

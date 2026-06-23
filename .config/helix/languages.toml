@@ -20,7 +20,7 @@ command = "rust-analyzer"
 
 [language-server.rust-analyzer.config]
 inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
+inlayHints.closingBraceHints.minLines = 2
 inlayHints.closureReturnTypeHints.enable = "with_block"
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
@@ -54,7 +54,7 @@ language-servers = [{ name = "superhtml", except-features = ["format"] }, "vscod
 file-types = ["hbs", "html"]
 # works better than other parsers for handlebars templates
 formatter = { command = 'prettier', args = ["--parser", "angular"] }
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "c"
