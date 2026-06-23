@@ -6,6 +6,8 @@ mkdir -p "$HOME/Pictures/Screenshots"
 
 mode="${1:-}"
 
+compositor=$(~/.config/scripts/get-compositor.sh)
+
 copy_and_save() {
   tee "$OUT" | wl-copy
 }
@@ -19,11 +21,11 @@ case "$mode" in
     grim - | copy_and_save
     ;;
   active)
-    if command -v hyprctl >/dev/null 2>&1; then
-      geom_str="$(hyprctl -j activewindow 2>/dev/null \
+    if [ "$compositor" = "hyprland" ]; then
+    geom_str="$(hyprctl -j activewindow 2>/dev/null \
         | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')"
       grim -g "$geom_str" - | copy_and_save
-    else
+    elif [ "$compositor" = "sway" ]; then
       geom_str="$(swaymsg -t get_tree 2>/dev/null \
         | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')"
       grim -g "$geom_str" - | copy_and_save
