@@ -9,6 +9,41 @@ fi
 
 session=$(echo "$zellij_sessions" | fuzzel -d --placeholder "Select zellij session...")
 
-if [ -n "$session" ]; then
-  kitty -o allow_remote_control=yes zellij attach "$session"
+[ -z "$session" ] && exit 0
+
+compositor=$(~/.config/scripts/get-compositor.sh)
+
+find_and_focus_window() {
+  local title="zellij-session-$1"
+
+  if [ "$compositor" = "hyprland" ]; then
+    match=$(hyprctl clients -j | jq -r --arg t "$title" '
+      .[] | select(.title == $t) | .address
+    ' | head -n1)
+    if [ -n "$match" ]; then
+      hyprctl dispatch focuswindow "address:$match"
+      return 0
+    fi
+
+  elif [ "$compositor" = "sway" ]; then
+    match=$(swaymsg -t get_tree | jq -r --arg t "$title" '
+      .. | objects |
+      select(
+        (.app_id == "kitty" or .window_properties.class == "kitty") and
+        (.name == $t)
+      ) | .id
+    ' | head -n1)
+    if [ -n "$match" ]; then
+      swaymsg "[con_id=$match] focus"
+      return 0
+    fi
+  fi
+
+  return 1
+}
+
+if find_and_focus_window "$session"; then
+  exit 0
 fi
+
+kitty --title "zellij-session-$session" -o allow_remote_control=yes zellij attach "$session"
