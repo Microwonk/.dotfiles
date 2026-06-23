@@ -183,9 +183,9 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 # Special key to take a screenshot with grim
 
-bindsym $mod+s exec slurp | grim -g - - | tee ~/Pictures/$(date +%s).png | wl-copy
-bindsym $mod+Shift+s exec grim - | tee ~/Pictures/$(date +%s).png | wl-copy
-bindsym $mod+Alt+s exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | tee ~/Pictures/$(date +%s).png | wl-copy
+bindsym $mod+s exec ~/.config/scripts/screenshot.sh selection
+bindsym $mod+Shift+s exec ~/.config/scripts/screenshot.sh fullscreen
+bindsym $mod+Alt+s exec ~/.config/scripts/screenshot.sh active
 
 # Default colors
 client.focused          #2f5d50 #2f5d50 #d8e3dc #2f5d50 #2f5d50
