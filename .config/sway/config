@@ -1,5 +1,6 @@
 exec ~/.config/waybar/launch.sh
 exec wl-paste --watch cliphist store
+exec swayidle
 exec_always dunst
 focus_follows_mouse yes
 focus_on_window_activation smart
