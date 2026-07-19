@@ -2,7 +2,7 @@
 (require (prefix-in helix. "helix/commands.scm"))
 (require (prefix-in helix.static. "helix/static.scm"))
 
-(provide shell git-add open-helix-scm open-init-scm)
+(provide shell open-helix-scm open-init-scm)
 
 (define (current-path)
   (let* ([focus (editor-focus)]
@@ -17,11 +17,6 @@
       ;; Replace the % with the current file
       (map (lambda (x) (if (equal? x "%") (current-path) x)) args)
       " ")))
-
-;;@doc
-;; Adds the current file to git
-(define (git-add)
-  (shell "git" "add" "%"))
 
 ;;@doc
 ;; Open the helix.scm file

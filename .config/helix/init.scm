@@ -13,7 +13,7 @@
       (o
         (o ":oil")
         (e ":oil-enter")
-        (b ":oil-back")
+        (u ":oil-up")
         (g ":oil-root")
         (s ":oil-save")
         (r ":oil-refresh")
@@ -32,3 +32,17 @@
 
 (keymap (global)
   (normal (space (E ":forest-open"))))
+
+(require "plugins/git.scm")
+
+(keymap (global)
+  (normal
+    (space
+      (g
+        (d ":git-diff")
+        (D ":git-diff-all")
+        (s
+          (a ":git-stage")
+          (A ":git-stage-all")
+          (u ":git-unstage")
+          (U ":git-unstage-all"))))))

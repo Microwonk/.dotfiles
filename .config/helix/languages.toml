@@ -17,6 +17,7 @@ roots = [
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
+cargo.autoreload = true
 
 [language-server.rust-analyzer.config]
 inlayHints.bindingModeHints.enable = false
