@@ -41,6 +41,8 @@
       (g
         (d ":git-diff")
         (D ":git-diff-all")
+        (c ":git-commit")
+        (C ":git-commit-apply")
         (s
           (a ":git-stage")
           (A ":git-stage-all")

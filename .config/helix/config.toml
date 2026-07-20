@@ -85,9 +85,10 @@ C-v = ":toggle cursorcolumn"
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
-B = ":sh git log -n 1 --format='format:%%h' --no-patch -L%{cursor_line},+1:%{buffer_name} | wl-copy && echo 'commit hash copied!'"
+B = ":! git log -n 1 --format='format:%%h' --no-patch -L%{cursor_line},+1:%{buffer_name} | wl-copy && echo 'commit hash copied!'"
 q = ":bc!"
 n = ":n"
+C-r = [":! rm %{buffer_name}", ":bc!"]
 
 [keys.normal.space.C]
 p = ":pipe ccase --to pascal"
