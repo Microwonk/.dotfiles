@@ -4,5 +4,5 @@ ly
 .git
 .gitignore
 Makefile
-helix
+/helix
 justfile
