@@ -43,6 +43,14 @@
         (D ":git-diff-all")
         (c ":git-commit")
         (C ":git-commit-apply")
+        (t
+         (s ":git-insert-trailer-signed-off-by")
+         (r ":git-insert-trailer-reviewed-by")
+         (t ":git-insert-trailer-tested-by")
+         (a ":git-insert-trailer-acked-by")
+         (b ":git-insert-trailer-reported-by")
+         (c ":git-insert-trailer-co-authored-by")
+         (u ":git-insert-trailer-suggested-by"))
         (s
           (a ":git-stage")
           (A ":git-stage-all")
