@@ -1,0 +1,10 @@
+worktrees: ~/Dev/worktrees
+
+repositories:
+  base:
+    - ~/Dev/pmx
+    - ~/Dev/pmxdev
+
+  match:
+    proxmox-datacenter-manager: proxmox-datacenter-manager.git
+    datacenter-manager: proxmox-datacenter-manager.git
