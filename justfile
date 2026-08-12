@@ -15,3 +15,9 @@ install-helix-plugins:
     forge pkg install --git https://github.com/mattwparas/helix-config.git
     forge pkg install --git https://github.com/Ra77a3l3-jar/forest.hx.git
     forge pkg install --git https://github.com/Ra77a3l3-jar/oil.hx.git
+
+install-dotfiles:
+    stow .
+
+uninstall-dotfiles:
+    stow -D .
