@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-zellij_sessions=$(zellij list-sessions 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}' | grep -v "^$")
+zellij_sessions=$(zellij list-sessions 2>/dev/null | sort | sed 's/\x1b\[[0-9;]*m//g' | awk '{print $1}' | grep -v "^$")
 
 if [ -z "$zellij_sessions" ]; then
   fuzzel -d --prompt-only "zellij: no sessions available"
