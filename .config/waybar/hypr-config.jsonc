@@ -65,7 +65,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 0,
-    "on-click": "kitty -e impala"
+    "on-click": "ghostty -e impala"
   },
   "custom/cat": {
     "exec": "~/.dotfiles/.config/waybar/cats.sh",
@@ -83,7 +83,7 @@
   "pulseaudio": {
     "format": "  {volume}%",
     "format-muted": "󰝟 Muted",
-    "on-click": "kitty -e wiremix -v output"
+    "on-click": "ghostty -e wiremix -v output"
   },
   "battery": {
     "format": "{capacity}% {icon}",

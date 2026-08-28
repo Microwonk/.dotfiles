@@ -1,0 +1,8 @@
+background = 000000
+background-opacity = 0.8
+shell-integration = zsh
+shell-integration-features = ssh-env,ssh-terminfo,sudo
+confirm-close-surface = false
+bell-features = no-audio
+cursor-color = #ffbbaa
+adjust-cursor-thickness = 2

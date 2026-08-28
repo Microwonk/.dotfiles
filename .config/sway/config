@@ -17,7 +17,7 @@ set $up k
 set $right l
 
 # Applications
-set $term kitty
+set $term ghostty
 set $menu fuzzel
 set $browser zen-browser
 

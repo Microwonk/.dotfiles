@@ -29,7 +29,7 @@ find_and_focus_window() {
     match=$(swaymsg -t get_tree | jq -r --arg t "$title" '
       .. | objects |
       select(
-        (.app_id == "kitty" or .window_properties.class == "kitty") and
+        (.app_id == "com.mitchellh.ghostty" or .window_properties.class == "com.mitchellh.ghostty") and
         (.name == $t)
       ) | .id
     ' | head -n1)
@@ -46,4 +46,4 @@ if find_and_focus_window "$session"; then
   exit 0
 fi
 
-kitty --title "zellij-session-$session" -o allow_remote_control=yes zellij attach "$session"
+ghostty --title="zellij-session-$session" -e zellij attach "$session"
