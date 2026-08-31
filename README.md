@@ -1,5 +1,4 @@
 my dotfiles :3
 
 ### Notes
-greetd config has to be installed manually,
-otherwise just use `stow .` or `make install`
+greetd/ly has to be installed manually, otherwise use the just commands to install.
