@@ -6,3 +6,5 @@ confirm-close-surface = false
 bell-features = no-audio
 cursor-color = #ffbbaa
 adjust-cursor-thickness = 2
+keybind = ctrl+enter=unbind
+working-directory = home
