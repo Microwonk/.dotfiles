@@ -1,7 +1,4 @@
 alias c='clear'
-alias nf='fastfetch'
-alias pf='fastfetch'
-alias ff='fastfetch'
 alias ls='eza -a --icons=always'
 alias ll='eza -al --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
@@ -9,3 +6,7 @@ alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
 alias vim='$EDITOR'
 alias fixup='fuck'
+alias zjt='zellij attach --create tmp options \
+  --default-cwd . \
+  --session-serialization false \
+  --on-force-close quit'
