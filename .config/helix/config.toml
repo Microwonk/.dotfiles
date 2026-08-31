@@ -27,6 +27,10 @@ bufferline = "multiple"
 color-modes = true
 # popup-border = "all"
 
+[editor.terminal]
+command = "ghostty"
+args = ["-e"]
+
 [editor.inline-diagnostics]
 cursor-line = "hint"
 other-lines = "warning"
