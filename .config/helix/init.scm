@@ -28,7 +28,8 @@
 
 (require "forest/forest.scm")
 (forest-configure! 'left #:ignore (list ".git" "target"))
-(forest-set-style! 'mini)
+(forest-set-style! 'snacks)
+(forest-set-sidebar-bg! #:focused "#1e1e2e" #:unfocused "#181825")
 
 (keymap (global)
   (normal (space (E ":forest-open"))))
