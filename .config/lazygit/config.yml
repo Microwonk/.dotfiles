@@ -3,7 +3,7 @@ gui:
     activeBorderColor:
       - green
       - bold
-  showIcons: true
+  nerdFontsVersion: "3"
 git:
   diffRenderers:
     - command: delta --dark --paging=never
