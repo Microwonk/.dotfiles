@@ -34,6 +34,8 @@
 (keymap (global)
   (normal (space (E ":forest-open"))))
 
+(require "showkeys/showkeys.scm")
+
 (require "plugins/git.scm")
 
 (keymap (global)

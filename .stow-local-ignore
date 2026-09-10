@@ -3,6 +3,7 @@ greetd
 ly
 .git
 .gitignore
+.gitmodules
 Makefile
 /helix
 justfile

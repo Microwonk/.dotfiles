@@ -11,10 +11,23 @@ install-helix:
         --locked
 
 [group('helix')]
-install-helix-plugins:
+install-helix-plugins: install-hx-plugin-config install-hx-plugin-forest install-hx-plugin-oil install-hx-plugin-showkeys
+
+[group('helix')]
+install-hx-plugin-config:
     forge pkg install --git https://github.com/mattwparas/helix-config.git
+
+[group('helix')]
+install-hx-plugin-forest:
     forge pkg install --git https://github.com/Ra77a3l3-jar/forest.hx.git
+
+[group('helix')]
+install-hx-plugin-oil:
     forge pkg install --git https://github.com/Ra77a3l3-jar/oil.hx.git
+
+[group('helix')]
+install-hx-plugin-showkeys:
+    forge pkg install --git https://github.com/HeitorAugustoLN/showkeys.hx.git
 
 install-dotfiles:
     stow .
