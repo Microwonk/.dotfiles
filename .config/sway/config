@@ -1,12 +1,15 @@
 exec ~/.config/waybar/launch.sh
 exec wl-paste --watch cliphist store
 exec swayidle
+exec swaymnesia restore && swaymnesia watch
+
 exec_always dunst
 focus_follows_mouse yes
 focus_on_window_activation smart
 focus_wrapping no
 default_border pixel 2
 gaps inner 2
+mouse_warping container
 
 ### Variables
 set $mod Mod4
@@ -145,12 +148,12 @@ mode "resize" {
         $down resize grow height 10px
         $up resize shrink height 10px
         $right resize grow width 10px
-        Left resize shrink width 10px
+        $left resize shrink width 10px
 
         Down resize grow height 10px
         Up resize shrink height 10px
         Right resize grow width 10px
-        $left resize shrink width 10px
+        Left resize shrink width 10px
         Return mode "default"
         Escape mode "default"
         $mod+r mode "default"

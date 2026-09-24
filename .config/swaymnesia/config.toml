@@ -1,0 +1,10 @@
+[[ignore]]
+app_id = '^com\.mitchellh\.ghostty$'
+
+[[allow]]
+app_id = '^com\.mitchellh\.ghostty$'
+title = '^zellij-session-'
+
+[[allow]]
+app_id = '^com\.mitchellh\.ghostty$'
+title = '^aerc$'
