@@ -10,3 +10,8 @@ alias zjt='zellij attach --create tmp options \
   --default-cwd . \
   --session-serialization false \
   --on-force-close quit'
+
+function alias_expand {
+  [ ${aliases[$1]+x} ] && printf '%s\n' "${aliases[$1]}" && return
+  false
+}
