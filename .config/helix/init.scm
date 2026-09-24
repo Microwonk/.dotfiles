@@ -59,3 +59,8 @@
           (A ":git-stage-all")
           (u ":git-unstage")
           (U ":git-unstage-all"))))))
+
+(require "plugins/rust-analyzer.scm")
+
+(keymap (global)
+  (normal (space (m ":rust-analyzer-expand-macro"))))
