@@ -1,0 +1,140 @@
+exec = [
+    "koopa",
+    "wl-paste --watch cliphist store",
+    # TODO: remove these once implemented
+    "swaybg -i ~/.config/wallpapers/space.jpg -m fill",
+    "swayidle",
+    "dunst",
+]
+
+[layout]
+gaps_inner = 2
+gaps_outer = 0
+border_width = 2
+
+[colors]
+focused = "#b65c42"
+focused_inactive = "#953b28"
+unfocused = "#3a2a24"
+urgent = "#b05a5a"
+text = "#f0e6d2"
+text_inactive = "#8aa39b"
+# Only visible where the bg does not cover the output
+background = "#0f1a14"
+
+[input.keyboard]
+layout = "us,de"
+options = "caps:super,shift:both_capslock,grp:win_space_toggle"
+
+[input.pointer]
+tap = true
+natural_scroll = false
+
+[[output]]
+name = "DP-2"
+mode = "2560x1440@240.000"
+
+[session]
+restore = true
+autosave = true
+relaunch_per_window = ["com.mitchellh.ghostty"]
+
+[bindings]
+"Mod+t" = "exec ghostty"
+"Mod+b" = "exec zen-browser"
+"Mod+q" = "kill"
+"Mod+d" = "exec fuzzel"
+"Mod+v" = "exec ~/.config/scripts/cliphist-fuzzel-img.sh"
+"Mod+z" = "exec ~/.config/scripts/zellij-fuzzel.sh"
+"Mod+Alt+l" = "exec swaylock -i ~/.config/wallpapers/space.jpg"
+"Mod+Alt+b" = "exec ghostty -e bluetui"
+"Mod+Alt+w" = "exec ghostty -e impala"
+"Mod+Alt+a" = "exec ghostty -e wiremix -v output"
+"Mod+Shift+c" = "reload"
+"Mod+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit fenstr? This will end your Wayland session.' -B 'Yes, exit fenstr' '/home/mw/Dev/fenstr/target/release/fenstrctl exit'"
+
+"Mod+h" = "focus left"
+"Mod+j" = "focus down"
+"Mod+k" = "focus up"
+"Mod+l" = "focus right"
+"Mod+Left" = "focus left"
+"Mod+Down" = "focus down"
+"Mod+Up" = "focus up"
+"Mod+Right" = "focus right"
+
+"Mod+Shift+h" = "move left"
+"Mod+Shift+j" = "move down"
+"Mod+Shift+k" = "move up"
+"Mod+Shift+l" = "move right"
+"Mod+Shift+Left" = "move left"
+"Mod+Shift+Down" = "move down"
+"Mod+Shift+Up" = "move up"
+"Mod+Shift+Right" = "move right"
+
+"Mod+1" = "workspace 1"
+"Mod+2" = "workspace 2"
+"Mod+3" = "workspace 3"
+"Mod+4" = "workspace 4"
+"Mod+5" = "workspace 5"
+"Mod+6" = "workspace 6"
+"Mod+7" = "workspace 7"
+"Mod+8" = "workspace 8"
+"Mod+9" = "workspace 9"
+"Mod+0" = "workspace 10"
+"Mod+Shift+1" = "move container to workspace 1; workspace 1"
+"Mod+Shift+2" = "move container to workspace 2; workspace 2"
+"Mod+Shift+3" = "move container to workspace 3; workspace 3"
+"Mod+Shift+4" = "move container to workspace 4; workspace 4"
+"Mod+Shift+5" = "move container to workspace 5; workspace 5"
+"Mod+Shift+6" = "move container to workspace 6; workspace 6"
+"Mod+Shift+7" = "move container to workspace 7; workspace 7"
+"Mod+Shift+8" = "move container to workspace 8; workspace 8"
+"Mod+Shift+9" = "move container to workspace 9; workspace 9"
+"Mod+Shift+0" = "move container to workspace 10; workspace 10"
+
+"Mod+Shift+b" = "split h"
+"Mod+Shift+v" = "split v"
+"Mod+w" = "layout tabbed"
+"Mod+e" = "layout toggle split"
+"Mod+f" = "fullscreen"
+"Mod+Ctrl+minus" = "floating toggle"
+"Mod+Shift+minus" = "move scratchpad"
+"Mod+minus" = "scratchpad show"
+"Mod+Tab" = "scratchpad cycle"
+"Mod+o" = "overview toggle"
+
+"Mod+r" = "mode resize"
+"Mod+x" = 'mode "exit[(s)uspend|(p)oweroff|(r)eboot|(l)ogout]"'
+
+"XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%"
+"XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%"
+"XF86AudioMicMute" = "exec pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+"XF86MonBrightnessDown" = "exec brightnessctl set 5%-"
+"XF86MonBrightnessUp" = "exec brightnessctl set 5%+"
+
+"Mod+s" = "exec ~/.config/scripts/screenshot.sh selection"
+"Mod+Shift+s" = "exec ~/.config/scripts/screenshot.sh fullscreen"
+"Mod+Alt+s" = "exec ~/.config/scripts/screenshot.sh active"
+
+[modes.resize]
+"h" = "resize shrink width 2 ppt"
+"j" = "resize grow height 2 ppt"
+"k" = "resize shrink height 2 ppt"
+"l" = "resize grow width 2 ppt"
+"Left" = "resize shrink width 2 ppt"
+"Down" = "resize grow height 2 ppt"
+"Up" = "resize shrink height 2 ppt"
+"Right" = "resize grow width 2 ppt"
+"Return" = "mode default"
+"Escape" = "mode default"
+"Mod+r" = "mode default"
+
+[modes."exit[(s)uspend|(p)oweroff|(r)eboot|(l)ogout]"]
+"s" = "exec systemctl suspend; mode default"
+"p" = "exec systemctl poweroff"
+"r" = "exec systemctl reboot"
+"l" = "exit"
+"Return" = "mode default"
+"Escape" = "mode default"
+"Mod+x" = "mode default"

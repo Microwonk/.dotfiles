@@ -1,0 +1,13 @@
+position = "top"
+height = 32
+font_size = 14.0
+
+[colors]
+background = "#3a2a243b"
+text = "#eceff4"
+focused = "#b65c42"
+visible = "#953b28"
+urgent = "#bf616a"
+
+[weather]
+location = "Vienna"
