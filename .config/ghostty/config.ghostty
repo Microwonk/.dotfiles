@@ -8,3 +8,5 @@ cursor-color = #ffbbaa
 adjust-cursor-thickness = 2
 keybind = ctrl+enter=unbind
 working-directory = home
+window-decoration = none
+gtk-single-instance = true
