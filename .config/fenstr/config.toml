@@ -2,7 +2,6 @@ exec = [
     "koopa",
     "wl-paste --watch cliphist store",
     # TODO: remove these once implemented
-    "swaybg -i ~/.config/wallpapers/space.jpg -m fill",
     "swayidle",
 ]
 
@@ -33,6 +32,11 @@ warp_to_focus = true
 [[output]]
 name = "DP-2"
 mode = "2560x1440@240.000"
+
+
+[wallpaper]
+path = "~/.config/wallpapers/space.jpg"
+mode = "fill"
 
 [session]
 restore = true
