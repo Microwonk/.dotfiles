@@ -11,3 +11,7 @@ urgent = "#bf616a"
 
 [weather]
 location = "Vienna"
+
+[notifications]
+enabled = true
+timeout = 5

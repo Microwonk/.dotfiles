@@ -4,7 +4,6 @@ exec = [
     # TODO: remove these once implemented
     "swaybg -i ~/.config/wallpapers/space.jpg -m fill",
     "swayidle",
-    "dunst",
 ]
 
 [layout]
@@ -29,6 +28,7 @@ options = "caps:super,shift:both_capslock,grp:win_space_toggle"
 [input.pointer]
 tap = true
 natural_scroll = false
+warp_to_focus = true
 
 [[output]]
 name = "DP-2"
