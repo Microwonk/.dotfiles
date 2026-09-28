@@ -64,3 +64,7 @@
 
 (keymap (global)
   (normal (space (m ":rust-analyzer-expand-macro"))))
+
+(require "plugins/searcher.scm")
+(keymap (global)
+  (normal (space (S ":search-duckduckgo"))))
