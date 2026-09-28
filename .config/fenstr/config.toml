@@ -47,9 +47,9 @@ relaunch_per_window = ["com.mitchellh.ghostty"]
 "Mod+v" = "exec ~/.config/scripts/cliphist-fuzzel-img.sh"
 "Mod+z" = "exec ~/.config/scripts/zellij-fuzzel.sh"
 "Mod+Alt+l" = "exec swaylock -i ~/.config/wallpapers/space.jpg"
-"Mod+Alt+b" = "exec ghostty -e bluetui"
-"Mod+Alt+w" = "exec ghostty -e impala"
-"Mod+Alt+a" = "exec ghostty -e wiremix -v output"
+"Mod+Alt+b" = "exec ghostty --class=koopa.bluetui -e bluetui"
+"Mod+Alt+w" = "exec ghostty --class=koopa.impala -e impala"
+"Mod+Alt+a" = "exec ghostty --class=koopa.wiremix -e wiremix -v output"
 "Mod+Shift+c" = "reload"
 "Mod+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit fenstr? This will end your Wayland session.' -B 'Yes, exit fenstr' '/home/mw/Dev/fenstr/target/release/fenstrctl exit'"
 
