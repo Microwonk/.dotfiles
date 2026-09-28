@@ -25,6 +25,13 @@ find_and_focus_window() {
       return 0
     fi
 
+  elif [ "$compositor" = "fenstr" ]; then
+    match=$(fenstrctl get tree --json | jq -r --arg t "$title" '.. | objects | select(.app_id == "com.mitchellh.ghostty" and .title == $t) | .id' | head -n1)
+    if [ -n "$match" ]; then
+      fenstrctl focus window "$match"
+      return 0
+    fi
+
   elif [ "$compositor" = "sway" ]; then
     match=$(swaymsg -t get_tree | jq -r --arg t "$title" '
       .. | objects |
