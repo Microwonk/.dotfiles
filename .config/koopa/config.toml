@@ -1,6 +1,7 @@
 position = "top"
 height = 32
 font_size = 14.0
+max_width = 2560
 
 [colors]
 background = "#3a2a243b"

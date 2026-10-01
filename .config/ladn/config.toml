@@ -1,0 +1,10 @@
+[fade]
+after = 300
+duration = 10
+
+[screens]
+off = 340
+
+[lock]
+after = 310
+service = "ladn"
