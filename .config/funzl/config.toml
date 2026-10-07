@@ -1,0 +1,22 @@
+width = 880
+margin_top = 420
+font_size = 15
+results = 8
+
+[bangs.w]
+name = "Wikipedia"
+url = "https://en.wikipedia.org/w/index.php?search={}"
+
+[bangs.r]
+name = "Rust Doc"
+url = "https://doc.rust-lang.org/std/?search={}"
+
+[bangs.zj]
+name = "Zellij"
+suggest = "zellij list-sessions --short"
+exec = "~/.config/scripts/zellij-funzl.sh {}"
+
+[bangs.v]
+name = "Clipboard"
+suggest = 'cliphist list | sed "s/^\([0-9]*\)\t\(.*\)$/\2  #\1/"'
+exec = 'v={}; cliphist decode "${v##*#}" | wl-copy'

@@ -1,4 +1,5 @@
 exec = [
+    "frostd",
     "koopa",
     "wl-paste --watch cliphist store",
     "ladn",
@@ -9,16 +10,6 @@ gaps_inner = 2
 gaps_outer = 0
 border_width = 2
 
-[colors]
-focused = "#b65c42"
-focused_inactive = "#953b28"
-unfocused = "#3a2a24"
-urgent = "#b05a5a"
-text = "#f0e6d2"
-text_inactive = "#8aa39b"
-# Only visible where the bg does not cover the output
-background = "#0f1a14"
-
 [input.keyboard]
 layout = "us,de"
 options = "caps:super,shift:both_capslock,grp:win_space_toggle"
@@ -28,10 +19,13 @@ tap = true
 natural_scroll = false
 warp_to_focus = true
 
-[[output]]
-name = "DP-2"
-mode = "2560x1440@240.000"
+[[rule]]
+title = "Picture-in-Picture"
+floating = true
 
+[[output]]
+name = "DP-1"
+mode = "2560x1440@240.000"
 
 [wallpaper]
 path = "~/.config/wallpapers/space.jpg"
@@ -46,9 +40,10 @@ relaunch_per_window = ["com.mitchellh.ghostty"]
 "Mod+t" = "exec ghostty"
 "Mod+b" = "exec zen-browser"
 "Mod+q" = "kill"
-"Mod+d" = "exec fuzzel"
-"Mod+v" = "exec ~/.config/scripts/cliphist-fuzzel-img.sh"
-"Mod+z" = "exec ~/.config/scripts/zellij-fuzzel.sh"
+"Mod+d" = "exec funzl"
+"Mod+v" = "exec funzl --bang v"
+"Mod+c" = "exec funzl --bang c"
+"Mod+z" = "exec funzl --bang zj"
 "Mod+Alt+l" = "exec ladn lock"
 "Mod+Alt+b" = "exec ghostty --class=koopa.bluetui -e bluetui"
 "Mod+Alt+w" = "exec ghostty --class=koopa.impala -e impala"

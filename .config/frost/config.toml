@@ -1,0 +1,11 @@
+terminal = "ghostty"
+
+[palette]
+background = "#0f1a14"
+surface = "#3a2a24"
+overlay = "#953b28"
+text = "#f0e6d2"
+subtext = "#8aa39b"
+accent = "#b65c42"
+secondary = "#953b28"
+urgent = "#b05a5a"

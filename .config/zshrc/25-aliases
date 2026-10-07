@@ -15,3 +15,6 @@ function alias_expand {
   [ ${aliases[$1]+x} ] && printf '%s\n' "${aliases[$1]}" && return
   false
 }
+
+source <(frostctl completions zsh)
+source <(fenstrctl completions zsh)
