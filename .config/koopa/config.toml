@@ -4,7 +4,7 @@ font_size = 14.0
 max_width = 2560
 
 [colors]
-background = "#3a2a243b"
+background = "#3a2a247b"
 
 [weather]
 location = "Vienna"
