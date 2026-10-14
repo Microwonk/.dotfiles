@@ -2,6 +2,7 @@ width = 880
 margin_top = 420
 font_size = 15
 results = 8
+shell_history = "~/.zsh_history"
 
 [bangs.w]
 name = "Wikipedia"
