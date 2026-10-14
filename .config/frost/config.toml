@@ -1,7 +1,7 @@
 terminal = "ghostty"
 
 [palette]
-background = "#0f1a14"
+background = "#141414"
 surface = "#3a2a24"
 overlay = "#953b28"
 text = "#f0e6d2"
